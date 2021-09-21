@@ -6,21 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Stack Session</title>
   <style>
-
-      /* INLINE > ID > CLASS > ELEMENT */
-
-    #red{
-      color: red;
+    div{
+        background-color: aquamarine;
+        height: 140px;
+        width: 700px;
     }
-    .pink{
-      color: pink;
-    }
-    h1{
-      color: green;
+    span{
+      background-color: blueviolet;
     }
   </style>
 </head>
 <body>
-  <h1 id="red" class="pink">Vedant Jadhav</h1>
+  <div>
+      <h2>Pointer for Block Element</h2>
+      <ol>
+        <li>Width of viewport is 100%of viewport</li>
+        <li>Height of block isnt set by default</li>
+        <li>Height and width can be explicitly set using CSS</li>
+      </ol>
+  </div>
+
+  <span>
+    <h2>Ponters for Inline Element</h2>
+    <ol>
+      <li>Width of inline level element is dependant on the content</li>
+      <li>Height of inline isn't set by default</li>
+      <li>Height and width can not be set explicitly by using CSS</li>
+      <li>Inline element does not work as wrapper for block elements</li>
+    </ol>
+  </span>
+  
 </body>
 </html>
