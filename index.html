@@ -6,35 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Stack Session</title>
   <style>
-    div{
-        background-color: aquamarine;
-        height: 140px;
-        width: 700px;
+    .background{
+      background-color: chartreuse;
+      box-sizing: content-box; /*BY DEFAULT SELECTED, THE PADDING OVERFLOWS THE SIZE OF THE CONTAINER */
+      width: 200px;
+      height: 200px;
+      padding-bottom:50px;
+      padding-left: 20px;
+      padding-right: 50px;
+      padding-top: 70px;
     }
-    span{
-      background-color: blueviolet;
+    .background2{
+      background-color: rgb(214, 204, 67);
+      box-sizing: border-box; /*THIS DO NOT LET THE CONTAINER OVERFLOW THE GIVEN SIZES*/
+      width: 200px;
+      height: 200px;
+      padding: 40px 50px 25px 20px; 
+      /*shorthand for paddding TOP-RIGHT-BOTTOM-LEFT*/
+      /* padding-bottom:25px;
+      padding-left: 20px;
+      padding-right: 50px;
+      padding-top: 40px; */
     }
   </style>
 </head>
 <body>
-  <div>
-      <h2>Pointer for Block Element</h2>
-      <ol>
-        <li>Width of viewport is 100%of viewport</li>
-        <li>Height of block isnt set by default</li>
-        <li>Height and width can be explicitly set using CSS</li>
-      </ol>
+  <div class="background">
+    <h2>Main Heading</h2>
   </div>
-
-  <span>
-    <h2>Ponters for Inline Element</h2>
-    <ol>
-      <li>Width of inline level element is dependant on the content</li>
-      <li>Height of inline isn't set by default</li>
-      <li>Height and width can not be set explicitly by using CSS</li>
-      <li>Inline element does not work as wrapper for block elements</li>
-    </ol>
-  </span>
-  
+<br><hr><br>
+  <div class="background2">
+    <h2>Main Heading 2</h2>
+  </div>
 </body>
 </html>
