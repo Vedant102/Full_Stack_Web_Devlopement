@@ -6,53 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Stack Session</title>
   <style>
-  *{ /* UNIVERSAL SELECTOR ; WE DEFINE THE UNIVERSAL STYLES */
-    color: white;
-    text-decoration: none;
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
   }
-
-    .background1{
-      border: 5px solid black;
-      background-color: blueviolet;
-      height:150px;  /*HEIGHT DEFINED IN PIXEL*/
-      width: 150px;  /*WIDTH DEFINED IN PIXEL*/
-    }
-    .background2{
-      border: 5px solid black;
-      background-color:turquoise; /*VIEWPORT IS THE USERS VISIBLE AREA, IT CHANGES FROM DEVICE TO DEVICE*/
-      height: 50vh; /*HEIGHT IS DEFINED AS 50% OF THEVIEWPORT HEIGHT*/
-      width: 50vw;  /*WIDTH IS DEFINED AS 50% OF THE VIEWPORT HEIGHT*/
-    }
-    .background3{
-      border: 5px solid black;
-      background-color: chartreuse;
-      height: 40%; /*WIDTH WILL BE 40% OF THE SCREEN SIZE*/
-      width: 50%; /*WIDTH DOES NO AS WIDTH OF PAGE IS NOT SET BY DEFAU;T*/
-    }
-    .background4{
-      border: 5px solid black;
-      background-color: red; /* 1REM = 16PX ; 1rem equals the font size of the html element (which for most browsers has a default value of 16px)*/
-      height: 20em;
-      width: 20em;
-    }
-
+  .head1{
+    background-color:crimson;
+    color: rgb(6, 255, 18);
+    padding: 10px;
+    text-align: center; 
+    width: 40vw; /*heading will be aligned to the center of the element whose width is 40vh */
+  }
+  .head2{
+    background-color:crimson;
+    color: rgb(6, 255, 18);
+    padding: 10px;
+    text-align: right; 
+    width: 50vw; /*heading will be aligned to the right of the element whose width is 50vh */
+  }
+  .head3{
+    background-color:crimson;
+    color: rgb(6, 255, 18);
+    padding: 10px;
+    text-align: left; 
+    width: 70vw; /*heading will be aligned to the left of the element whose width is 70vh */
+  }
   </style>
 </head>
 <body>
-  <div class="background1">
-    <h2>Main Heading 1</h2>
-    <a href="1.html">THIS IS A LINK</a>
-  </div>
-    <br>
-  <div class="background2">
-    <h2>Main Heading 2</h2> </div> 
-   <br>
-  <div class="background3">
-    <h2>Main Heading 3</h2>
-  </div>
-  <br>
-  <div class="background4">
-    <h2>Main Heading 4</h2>
-  </div>
+    <h1 class="head1">Heading 1</h1>
+    <br><hr><br>
+    <h1 class="head2">heading 2</h1>
+    <br><hr><br>
+    <h1 class="head3">Heading 3</h1>
 </body>
 </html>
