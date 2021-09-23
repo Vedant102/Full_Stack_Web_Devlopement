@@ -11,36 +11,28 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            margin: 12px;
+            margin: 4px;
         }
-        
-        .background{
-            color: #fff;
+        div.parent div{
+          background-color: lime;
         }
-        h1.background{ /* ELEMENT + CLASS*/
-          background-color: orange;
+        div.parent h1{
+            background-color: cyan;
         }
-        h2.background#unique{  /*ELEMENT + CLASS + ID*/
-          background-color: cyan;
-        }
-        h2.background{
-          background-color: palegreen;
-        }
-        h3.background{
-          background-color: red;
-        }
-        span.background{
-          background-color: royalblue;
+        div.parent h2{
+          background-color:deeppink;
         }
     </style>
 </head>
 
 <body>
-    <h1 class="background">Heading One</h1>
-    <h2 class="background">Heading Two</h2>
-    <h2 id="unique" class="background">Heading Two</h2>
-    <h3 class="background">Heading Three</h3>
-    <span class="background">hello</span>
+  <div class="parent">
+    <div>i'm a div</div>
+    <h1>I'm a heading</h1>
+    <h2>I'm a heading</h2>
+    <h1>I'm a heading</h1>
+    <h2>I'm a heading</h2>
+    <div>I'm a div again</div>
+</div>
 </body>
-
 </html>
