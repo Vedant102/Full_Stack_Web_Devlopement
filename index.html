@@ -9,36 +9,26 @@
   *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: sans-serif;
   }
-  .head1{
-    background-color:crimson;
-    color: rgb(6, 255, 18);
-    padding: 10px;
-    text-align: center; 
-    width: 40vw; /*heading will be aligned to the center of the element whose width is 40vh */
+  div{
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    background-color: crimson;
   }
-  .head2{
-    background-color:crimson;
-    color: rgb(6, 255, 18);
-    padding: 10px;
-    text-align: right; 
-    width: 50vw; /*heading will be aligned to the right of the element whose width is 50vh */
-  }
-  .head3{
-    background-color:crimson;
-    color: rgb(6, 255, 18);
-    padding: 10px;
-    text-align: left; 
-    width: 70vw; /*heading will be aligned to the left of the element whose width is 70vh */
+  .two{
+    background-color: lightgreen;
+    position: static; /*THIS IS THE DEFAULT POSITION FOR EVERY ELEMENT | THIS POSITIONING CAN NOT BE MODIFIED*/
+    top: 100px; /*DOES NOT WORK*/
+    left: 100px; /*DOES NOT WORK*/
   }
   </style>
 </head>
 <body>
-    <h1 class="head1">Heading 1</h1>
-    <br><hr><br>
-    <h1 class="head2">heading 2</h1>
-    <br><hr><br>
-    <h1 class="head3">Heading 3</h1>
+<div class="one"><h2>Lorem ipsum dolor sit.</h2></div>
+<div class="two"><h2>Lorem ipsum dolor sit amet consectetur.</h2></div>
+<div class="three"><h2>Lorem ipsum dolor sit.</h2></div>
 </body>
 </html>
