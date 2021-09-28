@@ -6,185 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-        body{
-            background-color:#fdf1ec;
-        }
-        nav{
-            background-color: #047bd5;
-            position: sticky;
-            top: 0;
-            display: flex;
-            justify-content: space-evenly;  
-        }
-        nav img{
-            height: 40px;
-            width: 150px;
-        }
-        nav input{
-            border-radius: 50px;
-            margin: 5px;
-            width: 40vw;
-        }
-        nav a{
+        div.parent{
+            background-color: #111;
             color: white;
-            text-align: center;
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        a:hover{
-            color:red;
-        }
-        .cards{
-            display: flex;
-            justify-content: space-around;
-            align-content: space-between;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .cards div{
-            background-color: white;
-            padding: 5px;
-            margin: 30px;
-            text-align: center;
-            height: 490px;
-            width: 250px;
-            border-radius: 20px;
-        }
-        .cards div img{
-            width: 100%;
-            height: 250px;
-            border-radius: 20px;
-        }
-        .cards div h1,h2{
-            display: inline-block;
-            padding: 5px;
-            margin: 8px; 
-        }
-        .cards h3{
-            background-color: #047bd5;
-            border-radius: 20px;
-            width: 40%;
-            padding: 10px;
-            display: inline-block;
+            font-size: 2rem;
         }
 
+        @media (max-width: 500px)
+        {
+            div.parent{
+                background-color: yellow;
+                color: red;
+            }
+        }
     </style>
+
 </head>
 <body>
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#login">PRODUCTS</a>
-            <a href="#home">NEWS</a>
-            <a href="#login">LOGIN</a>
-        </nav>
-
-    <div class="cards">
-        <div>
-            <img src="https://m.media-amazon.com/images/I/41dd7BQk0EL.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/7/6/76251---red5-gaming-keyboard-nova-web13.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/8/2/82701---x-rocker-panther-xl-corner-gaming-desk_web_8.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/7/3/73917_-_gxt_izza_illuminated_gaming_mouse_g.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://img.joomcdn.net/b0442506e17a531da96776e28d0420424a7ff0db_original.jpeg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.gizmochina.com/wp-content/uploads/2021/06/Skyworth-OLED-gaming-display-G90.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0087/3306/5252/products/5110101_7_800x800_crop_center.jpg   " alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://m.media-amazon.com/images/I/41dd7BQk0EL.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/7/6/76251---red5-gaming-keyboard-nova-web13.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/8/2/82701---x-rocker-panther-xl-corner-gaming-desk_web_8.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.menkind.co.uk/media/catalog/product/cache/18d539bb2b3719975e9326e6edaea759/7/3/73917_-_gxt_izza_illuminated_gaming_mouse_g.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://img.joomcdn.net/b0442506e17a531da96776e28d0420424a7ff0db_original.jpeg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://www.gizmochina.com/wp-content/uploads/2021/06/Skyworth-OLED-gaming-display-G90.jpg" alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0087/3306/5252/products/5110101_7_800x800_crop_center.jpg   " alt="">
-            <h1>Lorem, ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum amet autem dolorum molestias odit, explicabo perspiciatis tenetur.</p>
-            <h2>Price : 1,99,999.00/-</h2>
-            <h3>BUY</h3>
-        </div>
-
-    </div>
+    <div class="parent">
+        <h1>im a heading</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatem nulla, perspiciatis repudiandae repellat sed laboriosam ratione distinctio reiciendis natus atque consequuntur quasi ullam iusto similique veniam blanditiis cumque? Recusandae aperiam explicabo nesciunt odio placeat, ducimus accusantium error necessitatibus, magnam numquam voluptate dolore a in asperiores expedita cumque voluptatibus praesentium et ipsa mollitia? Ipsum, autem?</div>
 </body>
 </html>
