@@ -11,12 +11,20 @@
             color: white;
             font-size: 2rem;
         }
-
-        @media (max-width: 500px)
+ 
+        @media (max-width: 700px) /*the order of media tag matters, whicever style comes last is the final style of page*/
         {
             div.parent{
                 background-color: yellow;
                 color: red;
+            }
+        }
+
+        @media (max-width: 500px)
+        {
+            div.parent{
+                background-color: red;
+                color: cyan;
             }
         }
     </style>
