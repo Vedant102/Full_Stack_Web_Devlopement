@@ -1,9 +1,13 @@
-//NULL
-var age=null
-console.log(age)
-console.log(typeof age)
+// ARITHMETIC OPERATORS
+var a=10
+var b=5
+console.log("a+b=",a+b)
+console.log("a-b=",a-b)
+console.log("a*b=",a*b)
+console.log("a/b=",a/b)
+console.log("a**b=",a**b)
+console.log("a%b=",a%b)
 
-//UNDEFINED
-var age1
-console.log(age1)
-console.log(typeof age1)
+//ASSIGNMENT OPERATORS
+b=10
+
