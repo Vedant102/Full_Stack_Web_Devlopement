@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SIDEBAR</title>
     <style>
         div.parent{
-            background-color: #111;
-            color: white;
-            font-size: 2rem;
+           display: flex;
+           align-items: stretch;
+           background-color: #111;
+           height: 100vh;
+        }
+        div.child{
+            background-color: #ffbf00;
+            flex-basis: 80%;
+        }
+        div.sidebar{
+            background-color: crimson;
+            flex-basis: 20%;
         }
  
-        @media (max-width: 700px) /*the order of media tag matters, whicever style comes last is the final style of page*/
+        @media (max-width: 450px)
         {
-            div.parent{
-                background-color: yellow;
-                color: red;
+            div.sidebar{ /*THE SIDEBAR WILL DISAPPER FOR WIDTH LESS THAN 450PX*/
+                flex-basis: 0%;
             }
-        }
-
-        @media (max-width: 500px)
-        {
-            div.parent{
-                background-color: red;
-                color: cyan;
-            }
+            div.child{
+            background-color: #ffbf00;
+            flex-basis: 100%;
         }
     </style>
 
 </head>
 <body>
     <div class="parent">
-        <h1>im a heading</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatem nulla, perspiciatis repudiandae repellat sed laboriosam ratione distinctio reiciendis natus atque consequuntur quasi ullam iusto similique veniam blanditiis cumque? Recusandae aperiam explicabo nesciunt odio placeat, ducimus accusantium error necessitatibus, magnam numquam voluptate dolore a in asperiores expedita cumque voluptatibus praesentium et ipsa mollitia? Ipsum, autem?</div>
+        <div class="sidebar"></div>
+        <div class="child"></div>
+    </div>
 </body>
 </html>
