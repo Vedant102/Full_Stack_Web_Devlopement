@@ -21,15 +21,24 @@
             flex-basis: 20%;
         }
  
-        @media (max-width: 450px)
+        @media (max-width: 550px)
         {
-            div.sidebar{ /*THE SIDEBAR WILL DISAPPER FOR WIDTH LESS THAN 450PX*/
-                flex-basis: 0%;
+            div.sidebar{
+                animation: 5s expand linear infinite;
             }
             div.child{
-            background-color: #ffbf00;
             flex-basis: 100%;
         }
+
+        @keyframes expand{
+        0%{
+            flex-basis: 0%;
+
+        }
+        100%{
+            flex-basis: 50%;
+        }
+    }
     </style>
 
 </head>
