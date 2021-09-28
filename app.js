@@ -1,13 +1,9 @@
-//string
-console.log(typeof "hello")
-console.log(typeof 'v')
+//NULL
+var age=null
+console.log(age)
+console.log(typeof age)
 
-//Number
-console.log(typeof 102)
-console.log(typeof 2.5)
-console.log(typeof -33)
-console.log(typeof -3.333)
-
-//boolean
-console.log(typeof true)
-console.log(typeof false)
+//UNDEFINED
+var age1
+console.log(age1)
+console.log(typeof age1)
