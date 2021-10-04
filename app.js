@@ -1,10 +1,13 @@
-if (true) {
-  let Name = 'Ferrari' //this has only block scope
-}
-console.log(Name)
+//CREATING AN OBJECT IN JS 
 
-if (true) {
-  var Name1 = 'Ferrari' //this has global scope
+let car = {
+  name: "A CLASS",
+  manufacturer: "mercedes",
+  print: function(){
+    console.log(this)
+    console.log(this.name +' was manufatuured by ' + this.manufacturer)
+    console.log(car.manufacturer)
+    console.log(`${this.name} was created by ${this.manufacturer}`)
+  }
 }
-console.log(Name1)
-
+car.print()
