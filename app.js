@@ -1,13 +1,10 @@
-// ARITHMETIC OPERATORS
-var a=10
-var b=5
-console.log("a+b=",a+b)
-console.log("a-b=",a-b)
-console.log("a*b=",a*b)
-console.log("a/b=",a/b)
-console.log("a**b=",a**b)
-console.log("a%b=",a%b)
+if (true) {
+  let Name = 'Ferrari' //this has only block scope
+}
+console.log(Name)
 
-//ASSIGNMENT OPERATORS
-b=10
+if (true) {
+  var Name1 = 'Ferrari' //this has global scope
+}
+console.log(Name1)
 
