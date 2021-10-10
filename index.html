@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
-    <script defer src="./app.js"></script> <!-- script is meant to be executed after the document has been parsed -->
+    <style>
+        .animate{
+            transform: translateX(100px);
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
    <div>
-       <h2 id="heading">I'm a heading</h2>
+       <h2 id="heading" class="one two three four">I'm a heading</h2>
         <p class="para">im a paragraph</p>
         <a href="" class="para"></a>
     </div> 
