@@ -1,10 +1,15 @@
-var heading = document.getElementById('heading')
-var body = document.querySelector('body')
-body.classList.add('dark')
+var list =document.querySelector('ul')
+console.log(list)
 
 
-heading.innerHTML="qwertyuiop"
-heading.style="color:red;font-size:4rem"
-console.log(heading.classList)
-heading.classList.add('five')
-heading.classList.remove('one')
+var arr=['go to gym', 'cook food', 'eat']
+arr.push('complete assignment')
+
+for(var i=0;i<arr.length; i++){
+  var element = document.createElement('li')
+  var textnode = document.createTextNode(arr[i]) 
+  console.log(element)
+  element.appendChild(textnode)
+  console.log(element)
+  list.appendChild(element)
+}
