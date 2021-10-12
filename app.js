@@ -1,10 +1,8 @@
 const button = document.querySelector('button')
 const input = document.querySelector('input')
 const div = document.querySelector('div')
-div.innerHTML = localStorage.getItem('inputValue')
 
-button.addEventListener('click', (req, res) => {
-  localStorage.setItem('inputValue', input.value)
-  div.innerHTML = input.value
-  
-})
+const arr = [1, 2, 3, 4, 5]
+
+localStorage.setItem('val', JSON.stringify(arr)) //object(array) to string
+console.log(JSON.parse(localStorage.getItem('val'))) //string to object(array)
