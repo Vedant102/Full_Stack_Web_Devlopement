@@ -1,13 +1,18 @@
-const path = require("path") //path is a module (pre-defined)
+const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require("constants")
+const fs = require("fs") // fs (file system) is a module (pre-defined)
 
-console.log(path.resolve('./utlis.js')) // resolve - converts relative path to absolute path
+fs.readFile('./text.txt', 'utf8' ,(error,data) =>{ //return error or the data(in the form of buffer (raw data)) 
+  //utf8 convert buffer to string
+  if (error)  
+    console.log(error)
+  else
+    console.log(data /*toString()*/ ) // this convert buffer to string
+}
+)
+console.log('im a random log')
+// fs.readFileSync('./text.txt', 'utf8')  // makes the task synchronous
 
-console.log(path.relative('../','./utlis.js') ) // gives a path from A to B
-
-console.log(path.extname('./utils.js')) // tells the extension of the file
-
-console.log(path.dirname('/temp/utils2.js')) // tells the parent directory
-
-console.log(__dirname) // gives the name of directory we are working on
-
-console.log(path.join(__dirname, 'utils.js')) 
+ 
+fs.writeFile('./text.txt', "new stuff", (error) =>{ //overwrites the file
+  if (error) console.log(error)  
+})
