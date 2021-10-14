@@ -4,11 +4,14 @@ const express = require('express')
 const PORT=3000   
 const app = express() // call express Js
 
-app.get('/', (req,res) => { //get requwst
-  console.log(req)
-  if(req.headers['user-agent'] ==="Thunder Client (https://www.thunderclient.io)") //SMALL SECURITY CHECK THAT ALLOW ONYLY SPECIFIED REQUEST
-    res.send('GET')
-  else res.send('BLOCKED')
+const verify = (req, res, next) => {
+if(req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)")next()
+else res.send("BLOCKED")
+}
+
+app.get('/', verify, (req,res) => { 
+  res.send("VERIFIED")
+ 
 })
 
 app.listen(PORT, () => {
