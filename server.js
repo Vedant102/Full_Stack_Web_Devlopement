@@ -1,29 +1,16 @@
-const express = require('express')
+//Run this in thunder to get output `http://localhost:3000`
+
+const express = require('express') 
 const PORT=3000   
-const app = express() // express Js
+const app = express() // call express Js
 
-app.get('/', (req,res) => {
-  res.send('GET')
-})
-
-app.post('/', (req,res) =>{
-  res.send('POST')
-})
-
-app.put('/', (req,res) =>{
-  res.send('PUT')
-})
-
-app.patch('/', (req,res) =>{
-  res.send('PATCH')
-})
-
-app.delete('/', (req,res) =>{
-  res.send('DELETE')
+app.get('/', (req,res) => { //get requwst
+  console.log(req)
+  if(req.headers['user-agent'] ==="Thunder Client (https://www.thunderclient.io)") //SMALL SECURITY CHECK THAT ALLOW ONYLY SPECIFIED REQUEST
+    res.send('GET')
+  else res.send('BLOCKED')
 })
 
 app.listen(PORT, () => {
   console.log(`server running at ${PORT}`)
 })
-
-module.exports = () =>{}
