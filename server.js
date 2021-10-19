@@ -1,19 +1,22 @@
-//Run this in thunder to get output `http://localhost:3000`
+const express = require('express')
+const PORT =3000
+const app = express()
 
-const express = require('express') 
-const PORT=3000   
-const app = express() // call express Js
-
-const verify = (req, res, next) => {
-if(req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)")next()
-else res.send("BLOCKED")
+const logger = (req, res, next) => {
+  console.log(req.method)
+  next()
 }
 
-app.get('/', verify, (req,res) => { 
-  res.send("VERIFIED")
- 
+app.use(logger) //universal - this middlewear will be used on every request
+
+app.get('/', (req, res) => {
+  res.send('server running') 
 })
 
-app.listen(PORT, () => {
-  console.log(`server running at ${PORT}`)
+app.post('/', (req, res) => {
+  res.send('server running') 
+})
+
+app.listen(PORT,()=>{
+  console.log(`server at ${PORT}`)
 })
