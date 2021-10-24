@@ -1,38 +1,55 @@
 const express = require('express')
-const PORT = 3000
 const app = express()
+const PORT = 3000
 
 app.use(express.json())
 
-let products = [{name: "iphone 12", price: "999"}, {name: "iphone 1", price: "1999"}, {name: "iphone 14", price: "2999"},] //array 
+const token = "TOP_SECRET"
+let products = [{ name: 'iPhone12 Case', price: '999' }, { name: 'iPhone13 Case', price: '1199' }, { name: 'iPhone13 Pro Case', price: '1499' }]
 
-//--------------MIDDLEWARE----------
 
-const validator=(req,res,next) =>{
-  const{name,price} = req.body
+//-----------Middlewares----------------
+const validator = (req, res, next) => {
+    const { name, price } = req.body
 
-    if (!name || !price) res.json({Error: "Validation Failed" })
+    if (!name || !price) res.json({ error: "Validation failed" })
     else next()
 }
 
-//--------------PUBLIC ROUTES-------
+const isAuthorised = (req, res, next) => {
+    if (req.headers.authorisation === token) next()
+    else res.json({ error: "UNAUTHORISED" })
+}
 
-//send all products
-app.get('/products', (req, res)=>{  //products route
-  res.json({products}) 
+// -----------PUBLIC routes---------------
+
+app.get('/products', (req, res) => {
+    res.json({ products })
 })
 
-//-----------PRIVATE ROUTES----------
+// -----------PRIVATE routes---------------
 
-app.post('/products/add', (req,res) =>{
-const{name,price} = req.body
-  products.push({
-    name,
-    price,
+app.post('/products/add', isAuthorised, validator, (req, res) => {
+    const { name, price } = req.body
+
+    products.push({
+        name,
+        price,
     })
-res.send({products})  
+    res.send({ products })
 })
 
-app.listen(PORT,()=>{
-  console.log(`server at ${PORT}`)
+// -----------AUTH ROUTES----------
+app.post('/auth', (req, res) => {
+    const { email, password } = req.body
+    if (email === 'admin@mail.com' && password === 'password') {
+        res.send({ token })
+    } else {
+        res.send({ message: "UNAUTHORISED" })
+    }
+})
+
+
+app.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`)
 })
