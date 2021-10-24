@@ -1,20 +1,16 @@
 const express = require('express')
-const PORT =3000
+const PORT = 3000
 const app = express()
 
-const logger = (req, res, next) => {
-  console.log(req.method)
-  next()
-}
+app.use(express.json())
 
-app.use(logger) //universal - this middlewear will be used on every request
+let products = [{name: "iphone 12", price: "999"}, {name: "iphone 1", price: "1999"}, {name: "iphone 14", price: "2999"},] //array 
 
-app.get('/', (req, res) => {
-  res.send('server running') 
-})
 
-app.post('/', (req, res) => {
-  res.send('server running') 
+// GET Route 
+//send all products
+app.get('/products', (req, res)=>{  //products route
+  res.json({products})
 })
 
 app.listen(PORT,()=>{
