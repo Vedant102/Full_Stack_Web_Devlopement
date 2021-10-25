@@ -1,23 +1,8 @@
-const express = require('express')
+const express = require ('express')
+const database = require ('./database/db')
 const app = express()
+app.use(express.json())
 
-
-app.get('/products/:categories', (req,res)=>{
-    if(req.params.categories=='iphone'){
-        res.send('IPHONE')
-    }
-    if(req.params.categories=='realme'){
-        res.send('REALME')
-    }
-    if(req.params.categories=='vivo'){
-        res.send('VIVO')
-    }
-    if(req.params.categories=='redmi'){
-        res.send('REDMI')
-    }
-    console.log(req.params)
-    res.send('PING')
-})
 
 
 app.listen(3001, () =>{
