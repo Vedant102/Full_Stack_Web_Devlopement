@@ -23,28 +23,31 @@ router.get('/all', (req, res) => {
 
 
 router.post('/add', (req, res) => {
-    try {
-        const { name } = req.body
+  const { name } = req.body
+  const newCategory = {
+      id: uuidv4(),
+      name
+  }
 
-        let newCategory = {
-            name,
-            id: uuidv4()
-        }
+  try {
+      let includes = database.categories.find(item => item.name === name)
+      if (!includes) database.categories.push(newCategory)
 
-        database.categories.push(newCategory)
+      else console.log('Already exists')
+      res.json({
+          categories: database.categories,
+          message: "Successfully added category",
+          status: "SUCCESS"
+      })
+  } catch (error) {
+      console.log(error)
+      res.json({
+          categories: [],
+          message: error.message,
+          status: "FAILED"
+      })
+  }
 
-        res.status(200).json({
-            categories: categories,
-            message: error.message,
-            status: "SUCCESS"
-        })
-    } catch (error) {
-        res.status(200).json({
-            categories: [],
-            message: error.message,
-            status: "FAILED"
-        })
-    }
 })
 
 module.exports = router
