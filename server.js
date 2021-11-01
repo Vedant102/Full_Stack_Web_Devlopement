@@ -1,15 +1,13 @@
-const express = require ('express')
-const database = require ('./database/db')
+const express = require('express')
 const app = express()
-const categoryRoutes = require('./routes/categoryRoutes')
-
+const category_Routes = require('./routes/categoryRoutes')
+const product_Routes = require('./routes/productRoutes')
 app.use(express.json())
 
-// Router is just an object which allows us to create routes
-// http://localhost:3001/1234/CategoryRoutes
 
-app.use('/category', categoryRoutes) //Using the router
+app.use('/category', category_Routes)
+app.use('/products', product_Routes)
 
 app.listen(3001, () => {
-    console.log("listning to port 3001")
+    console.log("Listening at PORT 3001")
 })
