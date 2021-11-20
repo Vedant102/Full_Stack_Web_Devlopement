@@ -8,59 +8,44 @@
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <!-- mapbox -->
+    <title>Bootstrap</title>
     <style>
-      div{
-        min-height: 50px;
-        margin: 2px;
+      div.row{
+        background-color:black;
+      }
+      div.row div{
+        background-color: gold;
+        margin: 10px;
       }
     </style>
-    <title>Bootstrap</title>
-  
 </head>
-
 <body>
-  <div class="container-lg bg-secondary">
-    <div class="bg-danger w-25 d-xl-block d-none"></div>
-  
-  </div>
-  <div class="container bg-secondary">
-    <div class="bg-danger w-25 d-inline-block"></div>
-    <div class="bg-danger w-25 d-block"></div>
-  </div>
-  <div class="container-lg bg-secondary">
-    <div class="bg-danger w-25 m-2 d-inline-block"></div>
-    <div class="bg-danger w-25 m-2 d-inline-block"></div>
-  </div>
-  <div class="container bg-secondary">
-    <div class="bg-danger w-75"></div>
-  </div>
-  <div class="container bg-secondary">
-    <div class="bg-danger w-100"></div>
-  </div>
-
-  <div class="container-fluid bg-primary text-white text-center text-xl-start">RESPONSIVE HEADING </div>
-  <div class=" bg-warning text-primary container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, repudiandae vel voluptatibus vero unde impedit obcaecati nostrum explicabo ipsam fugiat adipisci distinctio repellat accusamus delectus expedita assumenda sequi dignissimos fuga nihil harum similique maxime voluptates.</div><br>
-  <h1 class="border border-5 border-warning  ms-5">Heading</h1>
-  <h1 class="border border-5 border-secondary  me-5">Heading</h1>
-  <h1 class="border border-5 border-info  m-5">Heading</h1><br>
-  <h2 class="text-warning text-end">Heading</h2>
-  <h2 class="text-info text-start">Heading</h2>
-  <h2 class="text-danger text-center">Heading</h2>
-  <h2 class="bg-dark text-light">Heading</h2><br>
-  <p class="h1 bg-info">Im a paragraph with Heading class</p><br>
-  <div class="p-3 mb-2 bg-primary text-white container">.bg-primary</div>
-  <div class="p-3 mb-2 bg-secondary text-white container-sm">.bg-secondary</div>
-  <div class="p-3 mb-2 bg-success text-white container-lg">.bg-success</div>
-  <div class="p-3 mb-2 bg-danger text-white container-xl">.bg-danger</div>
-  <div class="p-3 mb-2 bg-warning text-dark container-xxl">.bg-warning</div>
-  <a href="#" class="link-primary">Primary link</a>
-  <a href="#" class="link-secondary">Secondary link</a>
-  <a href="#" class="link-success">Success link</a>
-  <a href="#" class="link-danger">Danger link</a>
-  <a href="#" class="link-warning">Warning link</a>
-  <a href="#" class="link-info">Info link</a>
-  <a href="#" class="link-dark">Dark link</a><br>
-
-
-</body>
-</html>
+  <div class="container-lg">
+    <div class="row">
+      <div class="col">Column 1</div>
+      <div class="col">Column 2</div>
+      <div class="col">Column 3</div>
+    </div>
+    <br>
+    <!-- 12 columns are ther in bootstrap row -->
+    <div class="container-lg"> 
+      <div class="row">
+        <div class="col-3">Column 3/12</div>
+        <div class="col-1">Column 1/12</div>
+        <div class="col-2">Column 2/12</div>
+      </div>
+      <br>
+      <div class="container-lg"> 
+        <div class="row">
+          <div class="col-9 border border-4 border-primary">Column </div>
+          <div class="col-5 border border-4 border-primary">Column </div>
+          <div class="col-7 border border-4 border-primary">Column </div>
+          <div class="col-5 border border-4 border-primary">Column </div>
+          <div class="col-4 border border-4 border-primary">Column </div>
+          <div class="col-3 border border-4 border-primary">Column </div>
+          <div class="col-9 border border-4 border-primary">Column </div>
+          <div class="col-8 border border-4 border-primary">Column </div>
+          <div class="col-1 border border-4 border-primary">Column </div>
+          </div>
+          </body>
+          </html>
