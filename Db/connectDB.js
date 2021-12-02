@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connection_string = 'mongodb+srv://vedant:vedant@webdev.ur1m7.mongodb.net/test'
+const connection_string = 'mongodb+srv://vedant:<password>@webdev.ur1m7.mongodb.net/test'
 
 const connectDB = async ()=>{
   try{
